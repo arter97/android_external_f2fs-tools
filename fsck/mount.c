@@ -643,8 +643,10 @@ int validate_super_block(struct f2fs_sb_info *sbi, int block)
 					sizeof(struct f2fs_super_block));
 			ASSERT(ret >= 0);
 
+#ifdef ENABLE_VERSION_CHECK
 			c.auto_fix = 0;
 			c.fix_on = 1;
+#endif
 		}
 		print_sb_state(sbi->raw_super);
 		return 0;
