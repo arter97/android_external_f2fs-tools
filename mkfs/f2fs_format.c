@@ -38,33 +38,76 @@ struct f2fs_checkpoint *cp;
 static unsigned int quotatype_bits = 0;
 
 const char *media_ext_lists[] = {
-	"jpg",
-	"gif",
-	"png",
+	/* video */
 	"avi",
 	"divx",
-	"mp4",
-	"mp3",
-	"3gp",
-	"wmv",
-	"wma",
-	"mpeg",
+	"flv",
+	"m2ts",
+	"m4p",
+	"m4v",
 	"mkv",
 	"mov",
-	"asx",
-	"asf",
-	"wmx",
-	"svi",
-	"wvx",
+	"ts",
+	"vob",
+	"webm",
+
+	/* audio */
+	"aac",
+	"ac3",
+	"dts",
+	"flac",
+	"m4a",
+	"mka",
+	"wav",
+
+	/* image */
+	"bmp",
+	"gif",
+	"png",
+	"svg",
+	"webp",
+
+	/* archive */
+	"7z",
+	/* a - there are many other file types starting with 'a' */
+	"deb",
+	"gz",
+	"iso",
+	"jar",
+	"lzma",
+	"rar",
+	"tgz",
+	"txz",
+	"udf",
+	"xz",
+
+	/* other */
+	"pdf",
+	/* Python bytecode */
+	"pyc",
+	"ttf",
+	"ttc",
+
+	/* common prefix */
+	/* Covers jpg, jpeg, jp2 */
+	"jp",
+	/* Covers mp3, mp4, mpeg, mpg */
+	"mp",
+	/* Covers oga, ogg, ogm, ogv */
+	"og",
+	/* Covers wma, wmb, wmv */
 	"wm",
-	"mpg",
-	"mpe",
-	"rm",
-	"ogg",
-	"jpeg",
-	"video",
-	"apk",	/* for android system */
-	"so",	/* for android system */
+
+	/* android */
+	"apk",
+	/* Image alias */
+	"cnt",
+	/* YouTube */
+	"exo",
+	/* Android RunTime */
+	"odex",
+	"vdex",
+	"so",
 	NULL
 };
 
